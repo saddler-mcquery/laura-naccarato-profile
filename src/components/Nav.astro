@@ -1,0 +1,52 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+
+const { pathname } = Astro.url;
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+---
+<nav class="nav">
+  <a href={base} class="nav-brand">~/laura</a>
+  <div class="nav-links">
+    <a href={base} class:list={[{ active: pathname === base }]}>resume</a>
+    <a href={`${base}projects/`} class:list={[{ active: pathname.startsWith(`${base}projects`) }]}>projects</a>
+    <ThemeToggle />
+  </div>
+</nav>
+
+<style>
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-surface-border);
+    margin-bottom: 2rem;
+  }
+
+  .nav-brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-text);
+  }
+
+  .nav-brand:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+  }
+
+  .nav-links a.active {
+    color: var(--color-accent);
+  }
+
+</style>

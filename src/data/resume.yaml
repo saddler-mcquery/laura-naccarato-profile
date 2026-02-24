@@ -1,0 +1,94 @@
+basics:
+  name: "Laura Naccarato"
+  label: "Senior Front-End / Full-Stack Engineer"
+  url: "https://laura-naccarato.github.io"
+  summary: "Senior Front-End / Full-Stack Developer specializing in production-grade web applications in gaming and SaaS. Strong ownership across architecture, automation, and performance in high-stakes, live-production environments."
+  profiles:
+    - network: "GitHub"
+      url: "https://github.com/laura-naccarato"
+    - network: "LinkedIn"
+      url: "https://linkedin.com/in/laura-naccarato"
+
+work:
+  - company: "Rivalry"
+    position: "Software Engineer (Front-End Focus)"
+    startDate: "2024"
+    endDate: ""
+    highlights:
+      - "Led incremental rewrite of mission-critical wallet infrastructure in a live production gaming platform, maintaining legacy stability while shipping feature-flagged releases."
+      - "Designed scalable promotional systems — Races, Tournaments, VIP program, back-office promo-wallet tooling, and pre-rollover bonuses — using reusable component architecture to support engagement and monetization initiatives."
+      - "Modernized casino UI surfaces — navigation bar, game tiles, homepage layout — including a reusable carousel component, and contributed to the Nuxt2 → Nuxt3 migration, improving maintainability and performance."
+      - "Automated Hub88 → Strapi ingestion pipeline (slug deduplication + scheduled imports), increasing content reliability and reducing manual operational work."
+      - "Delivered a time-sensitive branded microsite (sobreviver-ao-msi) under tight deadline, coordinating with design and marketing stakeholders."
+      - "Took on expanded ownership following team restructuring, independently delivering complex front-end initiatives under evolving requirements."
+
+  - company: "Carbonhound"
+    position: "Founding Web Developer"
+    startDate: "2022"
+    endDate: "2024"
+    highlights:
+      - "Founding engineer responsible for front-end architecture, full-stack feature delivery, and design-to-code implementation of an enterprise carbon accounting platform."
+      - "Architected data-driven reporting workflows in React, integrating Node services and analytics systems (including Airtable) to support compliance and carbon accounting use cases."
+      - "Designed UI and backend automation systems reducing manual client operations, including automated report generation and client onboarding workflows."
+      - "Served as Security Officer, managing security operations and compliance requirements for the platform."
+      - "Represented the company at public events, engaging with potential investors and stakeholders."
+
+  - company: "CrowdRiff"
+    position: "Senior Full Stack Developer"
+    startDate: "2018"
+    endDate: "2022"
+    highlights:
+      - "Led development of a BigQuery/PubSub analytics pipeline to process backend service data at scale."
+      - "Contributed to improvements in story recommendation systems supporting content personalization."
+      - "Built and published public React-based NPM packages enabling external client integrations."
+      - "Mentored engineers and strengthened internal documentation practices."
+
+  - company: "Klick"
+    position: "Intermediate Web Developer"
+    startDate: "2017"
+    endDate: "2018"
+    highlights:
+      - "Maintained and extended an internal enterprise management platform supporting large-scale client operations."
+
+education:
+  - institution: "HackerYou"
+    area: "Full-Stack Masterclass"
+    location: "Toronto, ON"
+    endDate: "2017"
+
+  - institution: "HackerYou"
+    area: "Front-End Web Development Bootcamp"
+    location: "Toronto, ON"
+    endDate: "2015"
+
+  - institution: "Georgian College"
+    area: "Computer Systems Technician – Networking"
+    location: "Barrie, ON"
+    endDate: "2009"
+
+skills:
+  - name: "Languages"
+    keywords:
+      - "JavaScript (ES6+)"
+      - "TypeScript"
+      - "CSS/SCSS"
+  - name: "Frameworks"
+    keywords:
+      - "React"
+      - "Vue/Nuxt"
+      - "Redux"
+      - "Node/Express"
+  - name: "Infrastructure"
+    keywords:
+      - "REST APIs"
+      - "Strapi"
+      - "BigQuery"
+      - "PubSub"
+      - "CI/CD"
+  - name: "Practices"
+    keywords:
+      - "Component Architecture"
+      - "TDD"
+      - "Analytics Instrumentation"
+      - "Automation Scripting"
+      - "AI-Assisted Development"

@@ -1,0 +1,148 @@
+/* Dark mode (default) */
+:root {
+  --color-bg: #1E1614;
+  --color-surface: #2A201E;
+  --color-surface-border: #3D2F2B;
+  --color-text: #F0E4DE;
+  --color-text-muted: #A89490;
+  --color-accent: #E0686E;
+  --color-accent-hover: #F07E84;
+  --color-accent-subtle: #3A2225;
+  --color-accent-tag: #F4A0A4;
+  --color-code: #2F2220;
+}
+
+/* Light mode */
+:root.light {
+  --color-bg: #FDF6F0;
+  --color-surface: #FFFFFF;
+  --color-surface-border: #F0E0D6;
+  --color-text: #3D2C2C;
+  --color-text-muted: #7D6363;
+  --color-accent: #A8404A;
+  --color-accent-hover: #8E3039;
+  --color-accent-subtle: #FADBD8;
+  --color-accent-tag: #9A3640;
+  --color-code: #F5EBE6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+body {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* Terminal-style section headings */
+.section-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-surface-border);
+}
+
+.section-heading::before {
+  content: '$ ';
+  color: var(--color-text-muted);
+}
+
+/* Print styles */
+@media print {
+  :root {
+    --color-bg: #FFFFFF;
+    --color-surface: #FFFFFF;
+    --color-surface-border: #E0E0E0;
+    --color-text: #1a1a1a;
+    --color-text-muted: #555555;
+    --color-accent: #A8404A;
+    --color-accent-hover: #8E3039;
+    --color-accent-subtle: #F5E6E6;
+    --color-code: #F5F5F5;
+  }
+
+  html {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+
+  body {
+    max-width: none;
+    padding: 0;
+  }
+
+  /* Hide non-resume elements */
+  .nav,
+  .footer,
+  .cursor,
+  #themeToggle,
+  .print-btn {
+    display: none !important;
+  }
+
+  /* Remove link underlines, show URL */
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .hero-links a::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.75em;
+    color: var(--color-text-muted);
+  }
+
+  /* Clean section headings for print */
+  .section-heading::before {
+    content: none;
+  }
+
+  .section-heading {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text);
+  }
+
+  /* Prevent page breaks inside entries */
+  .entry {
+    break-inside: avoid;
+  }
+
+  .section-heading {
+    break-after: avoid;
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .hero-summary {
+    margin-top: 0.25rem;
+  }
+}

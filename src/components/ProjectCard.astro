@@ -1,0 +1,94 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  tech: string[];
+  repo?: string;
+  live?: string;
+}
+
+const { title, description, tech, repo, live } = Astro.props;
+---
+<article class="project-card">
+  <div class="card-titlebar">
+    <span class="dot red"></span>
+    <span class="dot yellow"></span>
+    <span class="dot green"></span>
+    <span class="card-title">{title}</span>
+  </div>
+  <div class="card-body">
+    <p class="card-desc">{description}</p>
+    <div class="card-tech">
+      {tech.map((t) => <span class="tag">{t}</span>)}
+    </div>
+    <div class="card-links">
+      {repo && <a href={repo} target="_blank" rel="noopener">repo</a>}
+      {live && <a href={live} target="_blank" rel="noopener">live</a>}
+    </div>
+  </div>
+</article>
+
+<style>
+  .project-card {
+    border: 1px solid var(--color-surface-border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: var(--color-surface);
+  }
+
+  .card-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--color-code);
+    border-bottom: 1px solid var(--color-surface-border);
+  }
+
+  .dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .dot.red { background: #E0686E; }
+  .dot.yellow { background: #E8A84E; }
+  .dot.green { background: #5DA06E; }
+
+  .card-title {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .card-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tag {
+    background: var(--color-accent-subtle);
+    color: var(--color-accent-tag);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  .card-links {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+  }
+</style>

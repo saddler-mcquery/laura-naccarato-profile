@@ -1,0 +1,10 @@
+title: "Equine Ipsum"
+description: "A horse-themed Lorem Ipsum generator. Pick your paragraph count and size, then copy placeholder text straight from the horse's mouth."
+tech:
+  - "JavaScript"
+  - "CSS"
+  - "HTML"
+repo: "https://github.com/saddler-mcquery/Equine-Ipsum"
+live: "https://saddler-mcquery.github.io/Equine-Ipsum/"
+featured: true
+order: 1
