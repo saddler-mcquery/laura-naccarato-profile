@@ -7,7 +7,7 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 <nav class="nav">
   <a href={base} class="nav-brand">~/laura</a>
   <div class="nav-links">
-    <a href={base} class:list={[{ active: pathname === base }]}>resume</a>
+    <a href={base} class:list={[{ active: pathname.replace(/\/$/, '') === base.replace(/\/$/, '') }]}>resume</a>
     <a href={`${base}projects/`} class:list={[{ active: pathname.startsWith(`${base}projects`) }]}>projects</a>
     <ThemeToggle />
   </div>
