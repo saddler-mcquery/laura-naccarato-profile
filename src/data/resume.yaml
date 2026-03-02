@@ -19,7 +19,7 @@ work:
       - "Designed scalable promotional systems — Races, Tournaments, VIP program, back-office promo-wallet tooling, and pre-rollover bonuses — using reusable component architecture to support engagement and monetization initiatives."
       - "Modernized casino UI surfaces — navigation bar, game tiles, homepage layout — including a reusable carousel component, and contributed to the Nuxt2 → Nuxt3 migration, improving maintainability and performance."
       - "Automated Hub88 → Strapi ingestion pipeline (slug deduplication + scheduled imports), increasing content reliability and reducing manual operational work."
-      - "Delivered a time-sensitive branded microsite (sobreviver-ao-msi) under tight deadline, coordinating with design and marketing stakeholders."
+      - "Delivered a time-sensitive branded microsite under tight deadline, coordinating with design and marketing stakeholders."
       - "Took on expanded ownership following team restructuring, independently delivering complex front-end initiatives under evolving requirements."
 
   - company: "Carbonhound"
@@ -28,7 +28,7 @@ work:
     endDate: "2024"
     highlights:
       - "Founding engineer responsible for front-end architecture, full-stack feature delivery, and design-to-code implementation of an enterprise carbon accounting platform."
-      - "Architected data-driven reporting workflows in React, integrating Node services and analytics systems (including Airtable) to support compliance and carbon accounting use cases."
+      - "Architected data-driven reporting workflows in React, integrating Node services and analytics systems to support compliance and carbon accounting use cases."
       - "Designed UI and backend automation systems reducing manual client operations, including automated report generation and client onboarding workflows."
       - "Represented the company at public events, engaging with potential investors and stakeholders."
 
