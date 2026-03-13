@@ -103,7 +103,8 @@ a:focus {
   .footer,
   .cursor,
   #themeToggle,
-  .print-btn {
+  .print-btn,
+  .hero-links {
     display: none !important;
   }
 
