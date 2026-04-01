@@ -1,0 +1,10 @@
+title: "Asteroids & Black Holes"
+description: "A browser-based 2.5D cosmic eat-to-grow game. Start as a tiny asteroid and devour surrounding celestial matter to evolve through four stages — Asteroid, Planet, Star, and Black Hole. At each threshold, a strategic two-choice gate grants a stat bonus and shapes your visual identity."
+tech:
+  - "TypeScript"
+  - "Phaser"
+  - "Vite"
+repo: "https://github.com/saddler-mcquery/asteroids-and-black-holes"
+live: "https://saddler-mcquery.github.io/asteroids-and-black-holes/"
+featured: true
+order: 1
