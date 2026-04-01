@@ -49,6 +49,13 @@ work:
     highlights:
       - "Maintained and extended an internal enterprise management platform supporting large-scale client operations."
 
+  - company: "Idea Couture"
+    position: "Web Developer"
+    startDate: "2015"
+    endDate: "2016"
+    highlights:
+      - "Built websites for clients including the Aviva Community Fund, delivering responsive, customer-facing web experiences."
+
 education:
   - institution: "HackerYou"
     area: "Full-Stack Masterclass"
