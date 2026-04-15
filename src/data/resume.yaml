@@ -1,13 +1,13 @@
 basics:
   name: "Laura Naccarato"
   label: "Senior Front-End / Full-Stack Engineer"
-  url: "https://laura-naccarato.github.io"
+  url: "https://lauranaccarato.com"
   summary: "Senior Front-End / Full-Stack Engineer specializing in production-grade web applications in gaming and SaaS. Strong ownership across architecture, automation, and performance in high-stakes, live-production environments."
   profiles:
     - network: "GitHub"
       url: "https://github.com/laura-naccarato"
     - network: "LinkedIn"
-      url: "https://linkedin.com/in/laura-naccarato"
+      url: "https://www.linkedin.com/in/lnaccarato/"
 
 work:
   - company: "Rivalry"
