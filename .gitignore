@@ -24,3 +24,6 @@ pnpm-debug.log*
 .idea/
 
 docs/*
+
+# staged cover letter (written by scripts/print-cover-letter.mjs)
+src/data/cover-letter-active.md

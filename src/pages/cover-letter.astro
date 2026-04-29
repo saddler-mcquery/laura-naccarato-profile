@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+
+const resumeFile = fs.readFileSync('./src/data/resume.yaml', 'utf-8');
+const resume = yaml.load(resumeFile) as any;
+
+const activePath = './src/data/cover-letter-active.md';
+let frontmatter: any = {};
+let paragraphs: string[] = [];
+let error = '';
+
+if (!fs.existsSync(activePath)) {
+  error = 'No active cover letter staged. Run: npm run cover-letter:pdf <slug>';
+} else {
+  const raw = fs.readFileSync(activePath, 'utf-8');
+  const fmMatch = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  const body = fmMatch ? fmMatch[2] : raw;
+  if (fmMatch) frontmatter = yaml.load(fmMatch[1]) || {};
+  paragraphs = body.trim().split(/\n\n+/).map(p => p.trim()).filter(Boolean);
+}
+---
+<BaseLayout title={`${resume.basics.name} — Cover Letter`}>
+  {error ? (
+    <p class="cover-error">{error}</p>
+  ) : (
+    <article class="letter">
+      <header class="letter-header">
+        <h1 class="hero-name">{resume.basics.name}</h1>
+        <p class="hero-label">{resume.basics.label}</p>
+        <p class="hero-contact">
+          laura.naccarato@gmail.com · 647-229-6114
+          {resume.basics.profiles.map((p: any) => (
+            <span> · <a href={p.url}>{p.network}</a></span>
+          ))}
+        </p>
+      </header>
+      {frontmatter.date && <p class="letter-date">{frontmatter.date}</p>}
+      <div class="letter-body">
+        {paragraphs.map((para: string) => <p>{para}</p>)}
+      </div>
+    </article>
+  )}
+</BaseLayout>
+
+<style>
+  .letter-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .hero-label {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin-top: 0.25rem;
+  }
+
+  .hero-contact {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    color: var(--color-text-muted);
+  }
+
+  .hero-contact a {
+    color: var(--color-accent);
+  }
+
+  .letter-date {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .letter-body p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .cover-error {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+  }
+
+  @media print {
+    .hero-contact a {
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+
+    .letter-body p {
+      margin-bottom: 0.75rem;
+    }
+  }
+</style>
