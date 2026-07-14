@@ -27,3 +27,9 @@ docs/*
 
 # staged cover letter (written by scripts/print-cover-letter.mjs)
 src/data/cover-letter-active.md
+
+# company-specific tailored resumes — personal, never publish (repo is public)
+src/data/resume-*.yaml
+
+# local Claude Code settings
+.claude/
