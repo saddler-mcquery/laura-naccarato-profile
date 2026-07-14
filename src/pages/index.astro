@@ -12,6 +12,7 @@ const resume = yaml.load(resumeFile) as any;
     <h1 class="hero-name">{resume.basics.name}<span class="cursor">_</span></h1>
     <p class="hero-label">{resume.basics.label}</p>
     <p class="hero-contact">
+      {resume.basics.location && <span>{resume.basics.location} · </span>}
       laura.naccarato@gmail.com · 647-229-6114
       {resume.basics.profiles.map((p: any) => (
         <span> · <a href={p.url}>{p.network}</a></span>
@@ -207,6 +208,11 @@ const resume = yaml.load(resumeFile) as any;
   @media print {
     .hero {
       text-align: center;
+    }
+
+    /* Decorative cursor — drop it so ATS parses a clean name */
+    .cursor {
+      display: none;
     }
 
     .hero-summary {

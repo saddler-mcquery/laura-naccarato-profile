@@ -1,6 +1,7 @@
 basics:
   name: "Laura Naccarato"
   label: "Senior Frontend Engineer"
+  location: "Toronto, ON, Canada"
   url: "https://lauranaccarato.com"
   summary: "Senior Frontend Engineer with 10 years shipping clean, well-tested JavaScript, React, and TypeScript across early-stage B2B SaaS and high-traffic consumer platforms. I break complex problems into incremental, confidently shipped solutions, own frontend architecture, and build reusable component libraries and frontend testing systems — unit, integration, regression, and acceptance — that let teams ship fast without breaking things. I thrive in fast-paced, engineering-first startups where taking ownership of the product and doing things the right way matter, and I run a genuinely agentic AI workflow (Claude, Cursor) daily across building, testing, and reviewing — without compromising the quality bar."
   profiles:
