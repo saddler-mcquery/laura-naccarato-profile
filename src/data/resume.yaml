@@ -1,9 +1,9 @@
 basics:
   name: "Laura Naccarato"
   label: "Senior Frontend Engineer"
-  location: "Toronto, ON, Canada"
+  location: "Greater Toronto Area, ON, Canada"
   url: "https://lauranaccarato.com"
-  summary: "Senior Frontend Engineer with 10 years shipping clean, well-tested JavaScript, React, and TypeScript across early-stage B2B SaaS and high-traffic consumer platforms. I break complex problems into incremental, confidently shipped solutions, own frontend architecture, and build reusable component libraries and frontend testing systems — unit, integration, regression, and acceptance — that let teams ship fast without breaking things. I thrive in fast-paced, engineering-first startups where taking ownership of the product and doing things the right way matter, and I run a genuinely agentic AI workflow (Claude, Cursor) daily across building, testing, and reviewing — without compromising the quality bar."
+  summary: "Senior Frontend Engineer with 10 years shipping clean, well-tested JavaScript, React, and TypeScript across early-stage B2B SaaS and high-traffic consumer platforms. I break complex problems into incremental, confidently shipped solutions, own frontend architecture, and build reusable component libraries and frontend testing systems — unit, integration, regression, and acceptance — that let teams ship fast without breaking things. I thrive in fast-paced, engineering-first startups where taking ownership of the product and doing things the right way matter, and I run a genuinely agentic AI workflow (Claude Code) daily across building, testing, and reviewing — without compromising the quality bar."
   profiles:
     - network: "GitHub"
       url: "https://github.com/laura-naccarato"
@@ -14,7 +14,7 @@ work:
   - company: "Rivalry"
     position: "Software Engineer (Front-End Focus)"
     startDate: "2024"
-    endDate: "2026"
+    endDate: "Feb 2026"
     highlights:
       - "Took full ownership of shared, reusable, well-tested component frameworks in TypeScript across revenue-driving customer-facing surfaces — Races, Tournaments, VIP program, pre-rollover bonuses, back-office tooling — consolidating one-off UI into consistent patterns other product teams build on to ship production-quality UI faster."
       - "Led an incremental rewrite of mission-critical wallet infrastructure on a live, regulated production platform — breaking it into feature-flagged steps with CI/CD quality gates to ship often and confidently under continuous traffic — real money, real stakes, no incidents."
@@ -22,7 +22,8 @@ work:
       - "Wrote clean code and reusable abstractions integrating RESTful and GraphQL APIs, and troubleshooted and supported production applications under real user load."
       - "Partnered with product owners, designers, and marketing stakeholders in a fast-paced, cross-functional agile team to take features from planning through delivery, shipping time-sensitive branded experiences on tight deadlines."
       - "Automated a Hub88 → Strapi content ingestion pipeline (slug deduplication, scheduled imports), writing maintainable code that improved reliability and removed recurring manual operational work."
-      - "Run a genuinely agentic AI development workflow (Claude, Cursor) across the full lifecycle — building, testing, and reviewing — pushing the tools hard while reading diffs line-by-line and writing the tests, so speed never comes at the cost of production standards; established review practices teammates could adopt."
+      - "Run a genuinely agentic AI development workflow (Claude Code) across the full lifecycle — building, testing, and reviewing — pushing the tools hard while reading diffs line-by-line and writing the tests, so speed never comes at the cost of production standards; established review practices teammates could adopt."
+      - "Role ended February 2026 when the company ceased operations."
 
   - company: "Carbonhound"
     position: "Founding Web Developer"
@@ -30,7 +31,7 @@ work:
     endDate: "2024"
     highlights:
       - "Founding engineer on an early-stage B2B SaaS platform — established the frontend architecture and engineering practices from the ground up in React and TypeScript, shaping both the product and how the team built under the ambiguity and shifting priorities of a growth-stage startup."
-      - "Built reusable React component systems and data-driven reporting workflows against RESTful services, partnering directly with product and design to deliver customer onboarding experiences from concept through release."
+      - "Worked directly with the CTO (founding backend engineer) to define REST API contracts and where the front end / backend line sits, working across the stack in Node.js when a feature needed it, and built reusable React component systems and data-driven reporting workflows on top — delivering customer onboarding experiences with product and design from concept through release."
       - "Designed automated report generation and onboarding workflows that replaced manual client operations and scaled as the customer base grew."
       - "Partnered cross-functionally with product, design, and leadership, and represented the company publicly with investors and stakeholders."
 
@@ -39,7 +40,7 @@ work:
     startDate: "2018"
     endDate: "2022"
     highlights:
-      - "Architected and published public React NPM packages — well-tested, documented, reusable component libraries with stable APIs adopted across internal teams and external client integrations, designed to hold up as more people build on them."
+      - "Architected and published a public React NPM package that customers use to embed CrowdRiff galleries inside their own websites — well-tested, documented, with a stable API designed to hold up in environments the team didn't control — alongside reusable component libraries adopted across internal teams."
       - "Reviewed pull requests, mentored engineers on component patterns, and advocated for clean code, testing, and shared standards that raised the quality bar and made future development faster."
       - "Strengthened documentation practices and frontend tooling, supporting team self-service, onboarding, and knowledge sharing across engineering."
       - "Contributed to improvements in story recommendation systems supporting content personalization at scale."
@@ -94,6 +95,7 @@ skills:
   - name: "Styling"
     keywords:
       - "SCSS"
+      - "Tailwind CSS"
       - "styled-components"
       - "Emotion"
       - "CSS Modules"
@@ -137,7 +139,7 @@ skills:
       - "Accessibility (WCAG)"
       - "Agile / Incremental Delivery"
       - "Early-Stage / 0→1 Engineering"
-      - "Agentic AI Development (Claude, Cursor)"
+      - "Agentic AI Development (Claude Code)"
       - "Code Reviews & Mentoring"
       - "Cross-Functional Collaboration"
       - "Documentation-First Engineering"

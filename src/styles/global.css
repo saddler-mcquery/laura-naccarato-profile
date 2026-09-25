@@ -132,8 +132,18 @@ a:focus {
     color: var(--color-text);
   }
 
-  /* Prevent page breaks inside entries */
+  /* Let long entries split across pages, but keep the title/company
+     with their first bullets and never split a single bullet. */
   .entry {
+    break-inside: auto;
+  }
+
+  .entry-header,
+  .entry-sub {
+    break-after: avoid;
+  }
+
+  .entry-highlights li {
     break-inside: avoid;
   }
 
