@@ -4,6 +4,7 @@ import { readFileSync, writeFileSync, existsSync, unlinkSync } from 'node:fs';
 import yaml from 'js-yaml';
 import puppeteer from 'puppeteer';
 import { startAstroDev } from './lib/dev-server.mjs';
+import { assertPdfParsable } from './lib/check-pdf-fonts.mjs';
 
 const slug = process.argv[2];
 if (!slug) {
@@ -48,7 +49,8 @@ try {
     margin: { top: '0.75in', right: '0.75in', bottom: '0.75in', left: '0.75in' },
   });
   await browser.close();
-  console.log(`Saved cover letter PDF to ${outPath}`);
+  assertPdfParsable(outPath);
+  console.log(`Saved cover letter PDF to ${outPath} (fonts verified ATS-parsable)`);
 } finally {
   cleanup();
   if (existsSync(stagedPath)) unlinkSync(stagedPath);

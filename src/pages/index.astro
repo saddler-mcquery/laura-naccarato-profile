@@ -234,6 +234,14 @@ const resume = yaml.load(resumeFile) as any;
 
     .entry {
       margin-bottom: 0.75rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Company first, then title + dates: the order ATS parsers expect */
+    .entry-sub {
+      order: -1;
+      font-weight: 700;
     }
 
     .entry-highlights {

@@ -4,12 +4,25 @@ import { readFileSync, existsSync } from 'node:fs';
 import yaml from 'js-yaml';
 import puppeteer from 'puppeteer';
 import { startAstroDev } from './lib/dev-server.mjs';
+import { assertPdfParsable } from './lib/check-pdf-fonts.mjs';
+import { lintVariants, report } from './lint-variants.mjs';
 
 const slug = process.argv[2];
 if (!slug) {
   console.error('Usage: npm run resume:pdf <slug>');
   console.error('       e.g. npm run resume:pdf clutch');
   process.exit(1);
+}
+
+// Gate: if a tailored variant exists for this slug, its facts must match base.
+const variantPath = `./src/data/resume-${slug}.yaml`;
+if (existsSync(variantPath)) {
+  const lint = lintVariants([variantPath]);
+  if (!lint.ok) {
+    report(lint);
+    console.error(`\nFix ${variantPath} (or pass --no-lint to skip) before generating the PDF.`);
+    if (!process.argv.includes('--no-lint')) process.exit(1);
+  }
 }
 
 // Prefer the cover letter's frontmatter company name for the filename; fall back to the slug.
@@ -43,7 +56,8 @@ try {
     margin: { top: '0.5in', right: '0.5in', bottom: '0.5in', left: '0.5in' },
   });
   await browser.close();
-  console.log(`Saved resume PDF to ${outPath}`);
+  assertPdfParsable(outPath);
+  console.log(`Saved resume PDF to ${outPath} (fonts verified ATS-parsable)`);
 } finally {
   cleanup();
 }

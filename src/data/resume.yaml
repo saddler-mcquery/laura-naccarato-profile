@@ -12,11 +12,11 @@ basics:
 
 work:
   - company: "Rivalry"
-    position: "Software Engineer (Front-End Focus)"
+    position: "Software Engineer"
     startDate: "2024"
     endDate: "Feb 2026"
     highlights:
-      - "Took full ownership of shared, reusable, well-tested component frameworks in TypeScript across revenue-driving customer-facing surfaces — Races, Tournaments, VIP program, pre-rollover bonuses, back-office tooling — consolidating one-off UI into consistent patterns other product teams build on to ship production-quality UI faster."
+      - "Front-end-focused engineer on a high-traffic consumer platform: took full ownership of shared, reusable, well-tested component frameworks in TypeScript across revenue-driving customer-facing surfaces — Races, Tournaments, VIP program, pre-rollover bonuses, back-office tooling — consolidating one-off UI into consistent patterns other product teams build on to ship production-quality UI faster."
       - "Led an incremental rewrite of mission-critical wallet infrastructure on a live, regulated production platform — breaking it into feature-flagged steps with CI/CD quality gates to ship often and confidently under continuous traffic — real money, real stakes, no incidents."
       - "Drove a frontend architecture migration (Nuxt2 → Nuxt3) across a high-traffic consumer platform, defining application structure and shared abstractions and modernizing core UI surfaces (navigation, game tiles, homepage, reusable carousel) while keeping the product stable for users."
       - "Wrote clean code and reusable abstractions integrating RESTful and GraphQL APIs, and troubleshooted and supported production applications under real user load."

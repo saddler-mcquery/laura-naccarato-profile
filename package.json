@@ -8,11 +8,13 @@
     "preview": "astro preview",
     "astro": "astro",
     "resume:pdf": "node scripts/print-resume.mjs",
-    "cover-letter:pdf": "node scripts/print-cover-letter.mjs"
+    "resume:lint": "node scripts/lint-variants.mjs",
+    "cover-letter:pdf": "node scripts/print-cover-letter.mjs",
+    "pdf:check": "node scripts/lib/check-pdf-fonts.mjs"
   },
   "dependencies": {
     "astro": "^5.17.1",
-    "js-yaml": "^4.1.1"
+    "js-yaml": "^4.3.2"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
